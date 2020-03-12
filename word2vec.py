@@ -47,11 +47,11 @@ def train_word2vec(filenames):
     sentences = Get_Sentences(filenames)
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     model = word2vec.Word2Vec(sentences, sg=0,size=64,window=5, min_count=10, workers=6,iter=5)
-    model.wv.save_word2vec_format('F:/lstm/data/cnews/vector_word.txt', binary=False)
+    model.wv.save_word2vec_format('HOME/mydata/lstm/data/cnew.vector_word.txt', binary=False)
     print('-------------------------------------------')
     print("Training word2vec model cost %.3f seconds...\n" % (time.time() - t1))
 
 if __name__ == '__main__':
-   filenames=[r'F:\lstm\data\cnews\cnews.train.txt',r'F:\lstm\data\cnews\cnews.val.txt',r'F:\lstm\data\cnews\cnews.test.txt']
+   filenames=[r'HOME/mydata/lstm/data/cnews.train.txt',r'HOME/mydata/lstm/data/cnews.val.txt',r'HOME/mydata/lstm/data/cnews.test.txt']
 
 train_word2vec(filenames)
