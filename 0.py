@@ -15,7 +15,7 @@ from sklearn import metrics   #评估
 from rnn_model import TRNNConfig, TextRNN
 from data.cnews_loader import read_vocab, read_category, batch_iter, process_file, build_vocab,export_word2vec_vectors,get_training_word2vec_vectors
 
-base_dir = r'F:\lstm\data\cnews'
+base_dir = r'HOME\mydata\lstm\data'
 train_dir = os.path.join(base_dir, 'cnews.train.txt')
 test_dir = os.path.join(base_dir, 'cnews.test.txt')
 val_dir = os.path.join(base_dir, 'cnews.val.txt')
@@ -23,7 +23,7 @@ vocab_dir = os.path.join(base_dir, 'cnews.vocab.txt')
 vector_word_dir= os.path.join(base_dir, 'vector_word.txt')#vector_word trained by word2vec
 vector_word_npz=os.path.join(base_dir, 'vector_word.npz')# save vector_word to numpy file
 #最佳验证结果保存路径
-save_dir = r'F:\lstm\checkpoints\textrnn'
+save_dir = r'HOME\mydata\lstm\checkpoints'
 save_path = os.path.join(save_dir, 'best_validation') 
 #获取词典
 '''build_vocab(train_dir,vocab_dir)
@@ -191,7 +191,7 @@ def test():
     print("Time usage:", time_dif)
     
 if __name__ == '__main__':
-    if not os.path.exists(r'F:\lstm\checkpoints\textrnn\checkpoint'): 
+    if not os.path.exists(r'HOME\mydata\lstm\checkpoints\checkpoint'): 
         train()
     else:
         test()
