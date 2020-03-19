@@ -4,14 +4,6 @@ Created on Sun Jun  2 22:17:21 2019
 
 @author: zhu
 """
-
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May  7 16:14:50 2019
-
-@author: zhu
-"""
-
            #encoding:utf-8
 import logging
 import time
@@ -52,6 +44,6 @@ def train_word2vec(filenames):
     print("Training word2vec model cost %.3f seconds...\n" % (time.time() - t1))
 
 if __name__ == '__main__':
-   filenames=[r'HOME/mydata/lstm/data/cnews.train.txt',r'HOME/mydata/lstm/data/cnews.val.txt',r'HOME/mydata/lstm/data/cnews.test.txt']
+   filenames=[r'HOME/mydata/lstm/data/cnewstest.txt',r'HOME/mydata/lstm/data/cnewsval.txt',r'HOME/mydata/lstm/data/cnewstest.txt']
 
 train_word2vec(filenames)
