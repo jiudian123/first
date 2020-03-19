@@ -16,10 +16,10 @@ from rnn_model import TRNNConfig, TextRNN
 from data.cnews_loader import read_vocab, read_category, batch_iter, process_file, build_vocab,export_word2vec_vectors,get_training_word2vec_vectors
 
 base_dir = r'HOME\mydata\lstm\data'
-train_dir = os.path.join(base_dir, 'cnews.train.txt')
-test_dir = os.path.join(base_dir, 'cnews.test.txt')
-val_dir = os.path.join(base_dir, 'cnews.val.txt')
-vocab_dir = os.path.join(base_dir, 'cnews.vocab.txt')
+train_dir = os.path.join(base_dir, 'cnewstrain.txt')
+test_dir = os.path.join(base_dir, 'cnewstest.txt')
+val_dir = os.path.join(base_dir, 'cnewsval.txt')
+vocab_dir = os.path.join(base_dir, 'cnewsvocab.txt')
 vector_word_dir= os.path.join(base_dir, 'vector_word.txt')#vector_word trained by word2vec
 vector_word_npz=os.path.join(base_dir, 'vector_word.npz')# save vector_word to numpy file
 #最佳验证结果保存路径
