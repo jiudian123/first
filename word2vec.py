@@ -39,7 +39,7 @@ def train_word2vec(filenames):
     sentences = Get_Sentences(filenames)
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     model = word2vec.Word2Vec(sentences, sg=0,size=64,window=5, min_count=10, workers=6,iter=5)
-    model.wv.save_word2vec_format('HOME/mydata/lstm/data/cnew.vector_word.txt', binary=False)
+    model.wv.save_word2vec_format('HOME/mydata/lstm/data/cnewsvector_word.txt', binary=False)
     print('-------------------------------------------')
     print("Training word2vec model cost %.3f seconds...\n" % (time.time() - t1))
 
